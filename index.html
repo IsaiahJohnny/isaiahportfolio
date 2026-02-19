@@ -436,31 +436,68 @@
            </svg></a>
          </div>
         </div>
-       </div><!-- Contact Form -->
-       <div class="rounded-xl p-8" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
-        <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;">Send a message</h3>
-        <form id="contact-form" class="space-y-4">
-         <div><label for="name" class="block text-sm mb-2" style="color: #9ca3af;">Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg font-mono-custom text-sm focus:outline-none focus:ring-2" style="background-color: #1a2f1a; border: 1px solid #2d4a2d; color: #f0fdf4; --tw-ring-color: #22c55e;" placeholder="Your name">
-         </div>
-         <div><label for="email" class="block text-sm mb-2" style="color: #9ca3af;">Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg font-mono-custom text-sm focus:outline-none focus:ring-2" style="background-color: #1a2f1a; border: 1px solid #2d4a2d; color: #f0fdf4; --tw-ring-color: #22c55e;" placeholder="your@email.com">
-         </div>
-         <div><label for="message" class="block text-sm mb-2" style="color: #9ca3af;">Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg font-mono-custom text-sm focus:outline-none focus:ring-2 resize-none" style="background-color: #1a2f1a; border: 1px solid #2d4a2d; color: #f0fdf4; --tw-ring-color: #22c55e;" placeholder="How can I help you?"></textarea>
-         </div><button type="submit" id="submit-btn" class="w-full py-3 rounded-lg font-semibold transition-all hover:opacity-90 flex items-center justify-center gap-2" style="background-color: #22c55e; color: #0a0f0a;">
-          <svg class="w-5 h-5" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13" /> <polygon points="22 2 15 22 11 13 2 9 22 2" />
-          </svg> Send Message </button>
-        </form>
-        <div id="form-success" class="hidden mt-4 p-4 rounded-lg text-center" style="background-color: #1a2f1a; border: 1px solid #22c55e;">
-         <div class="font-mono-custom" style="color: #22c55e;">
-          ✓ Message sent successfully!
-         </div>
-         <div class="text-sm mt-1" style="color: #9ca3af;">
-          I'll get back to you soon.
-         </div>
-        </div>
-       </div>
+       </div><!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-900 text-white">
+  <div class="max-w-4xl mx-auto px-6">
+    
+    <h2 class="text-4xl font-bold mb-6 text-center">Let’s Work Together</h2>
+    
+    <p class="text-gray-400 text-center mb-10">
+      I’m open to new opportunities, collaborations, and IT support roles.
+      Feel free to reach out — I’d be happy to connect.
+    </p>
+
+    <form action="https://formsubmit.co/austriaisaiahjohn6@gmail.com" 
+          method="POST"
+          class="space-y-6 bg-gray-800 p-8 rounded-lg shadow-lg">
+
+      <!-- Hidden Settings -->
+      <input type="hidden" name="_subject" value="New Portfolio Message">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <!-- Name -->
+      <div>
+        <label class="block mb-2 text-sm font-medium">Full Name</label>
+        <input type="text" 
+               name="name" 
+               required
+               class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500">
       </div>
-     </div>
-    </section><!-- Footer -->
+
+      <!-- Email -->
+      <div>
+        <label class="block mb-2 text-sm font-medium">Email Address</label>
+        <input type="email" 
+               name="email" 
+               required
+               class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500">
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="block mb-2 text-sm font-medium">Message</label>
+        <textarea name="message" 
+                  rows="5" 
+                  required
+                  class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" 
+              class="w-full bg-blue-600 hover:bg-blue-700 transition duration-300 p-3 rounded font-semibold">
+        Send Message
+      </button>
+
+    </form>
+
+    <p class="text-gray-500 text-center mt-6 text-sm">
+      Response time: Within 24 hours
+    </p>
+
+  </div>
+</section>
+<!-- Footer -->
     <footer class="px-6 py-8" style="background-color: #0d120d; border-top: 1px solid #1a2f1a;">
      <div class="max-w-6xl mx-auto text-center">
       <div class="font-mono-custom text-sm" style="color: #9ca3af;"><span style="color: #22c55e;">©</span> 2026 Isaiah John Austria. All systems operational.
@@ -658,4 +695,5 @@
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb987c461a70dcb',t:'MTc3MDcwNDczOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
