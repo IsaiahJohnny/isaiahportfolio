@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Support Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .font-mono-custom {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    .font-sans-custom {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .terminal-cursor {
+      animation: blink 1s step-end infinite;
+    }
+    
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    
+    .grid-bg {
+      background-image: 
+        linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    
+    .glow-border {
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), inset 0 0 20px rgba(34, 197, 94, 0.05);
+    }
+    
+    .status-pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .skill-bar {
+      transition: width 1s ease-out;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+    
+    .typing-text::after {
+      content: '|';
+      animation: blink 1s step-end infinite;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-sans-custom">
+  <div id="app-container" class="h-full overflow-auto"><!-- Background Layer -->
+   <div class="min-h-full grid-bg" style="background-color: #0a0f0a;"><!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 border-b" style="background-color: rgba(10, 15, 10, 0.95); border-color: #1a2f1a;">
+     <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+       <div class="flex items-center gap-3">
+        <div class="w-3 h-3 rounded-full status-pulse" style="background-color: #22c55e;"></div><span class="font-mono-custom text-sm" style="color: #22c55e;">SYSTEM.ONLINE</span>
+       </div>
+       <div class="hidden md:flex items-center gap-8"><a href="#about" class="text-sm transition-colors hover:opacity-80" style="color: #9ca3af;">About</a> <a href="#skills" class="text-sm transition-colors hover:opacity-80" style="color: #9ca3af;">Skills</a> <a href="#experience" class="text-sm transition-colors hover:opacity-80" style="color: #9ca3af;">Experience</a> <a href="#Contact" class="text-sm transition-colors hover:opacity-80" style="color: #9ca3af;">Contact</a>
+       </div>
+      </div>
+     </div>
+    </nav><!-- Hero Section -->
+    <section class="px-6 py-20 md:py-32">
+     <div class="max-w-6xl mx-auto">
+      <div class="rounded-xl p-8 md:p-12 glow-border" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+       <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12"><!-- Avatar -->
+      <div class="relative flex justify-center">
+  
+  <!-- Profile Container -->
+  <div class="profile-wrapper rounded-full overflow-hidden flex items-center justify-center
+              border-2 border-green-500
+              w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48">
+
+    <img src="image/pic.jfif"
+         alt="Isaiah John Austria"
+         class="w-full h-full object-cover rounded-full transition-transform duration-300 hover:scale-105">
+
+  </div>
+
+  <!-- Verified Badge -->
+  <div class="absolute bottom-0 right-0 translate-x-2 translate-y-2
+              px-3 py-1 rounded-full text-xs font-mono-custom
+              bg-green-500 text-[#0a0f0a] shadow-md">
+    VERIFIED
+  </div>
+
+</div>
+<!-- Info -->
+        <div class="text-center md:text-left flex-1">
+         <div class="font-mono-custom text-xs mb-2" style="color: #22c55e;">
+          &gt; initializing profile...
+         </div>
+         <h1 id="hero-name" class="text-4xl md:text-5xl font-bold mb-3" style="color: #f0fdf4;">Isaiah John Austria</h1>
+         <h2 id="hero-title" class="text-xl md:text-2xl font-mono-custom mb-4" style="color: #22c55e;">Level 1.5 Technical Support Engineer</h2>
+         <p id="hero-tagline" class="text-lg max-w-xl" style="color: #9ca3af;">Resolving complex technical challenges with precision and empathy. 2+ years of experience in enterprise IT support.</p>
+         <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start"><a href="#contact" class="px-6 py-3 rounded-lg font-semibold transition-all hover:opacity-90" style="background-color: #22c55e; color: #0a0f0a;"> Get In Touch </a> <a href="#experience" class="px-6 py-3 rounded-lg font-semibold transition-all hover:opacity-80" style="background-color: transparent; color: #22c55e; border: 1px solid #22c55e;"> View Experience </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Stats Section -->
+    <section class="px-6 pb-16">
+     <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+       <div class="rounded-lg p-6 text-center card-hover" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <div class="text-3xl font-bold font-mono-custom" style="color: #22c55e;">
+         15K+
+        </div>
+        <div class="text-sm mt-1" style="color: #9ca3af;">
+         Tickets Resolved
+        </div>
+       </div>
+       <div class="rounded-lg p-6 text-center card-hover" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <div class="text-3xl font-bold font-mono-custom" style="color: #22c55e;">
+         98%
+        </div>
+        <div class="text-sm mt-1" style="color: #9ca3af;">
+         Satisfaction Rate
+        </div>
+       </div>
+       <div class="rounded-lg p-6 text-center card-hover" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <div class="text-3xl font-bold font-mono-custom" style="color: #22c55e;">
+         2+
+        </div>
+        <div class="text-sm mt-1" style="color: #9ca3af;">
+         Years Experience
+        </div>
+       </div>
+       <div class="rounded-lg p-6 text-center card-hover" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <div class="text-3xl font-bold font-mono-custom" style="color: #22c55e;">
+         24/7
+        </div>
+        <div class="text-sm mt-1" style="color: #9ca3af;">
+         Availability
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- About Section -->
+    <section id="about" class="px-6 py-16">
+     <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
+       <h2 class="text-2xl font-bold" style="color: #f0fdf4;">About</h2>
+      </div>
+      <div class="rounded-xl p-8" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+       <p id="about-text" class="text-lg leading-relaxed" style="color: #d1d5db;">I'm a dedicated Technical Support Specialist with a strong commitment to resolving issues and delivering reliable IT solutions. My expertise includes Active Directory management, ticket resolution, IT asset management, basic network troubleshooting, and hardware and software support. I believe effective technical support is not just about fixing problems—it’s about understanding user needs, communicating clearly, and implementing solutions that enhance productivity and prevent future issues.</p>
+       <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="flex items-start gap-3">
+         <svg class="w-6 h-6 flex-shrink-0 mt-1" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /> <polyline points="22 4 12 14.01 9 11.01" />
+         </svg>
+         <div>
+          <div class="font-semibold" style="color: #f0fdf4;">
+           Problem Solver
+          </div>
+          <div class="text-sm" style="color: #9ca3af;">
+           Root cause analysis expert
+          </div>
+         </div>
+        </div>
+        <div class="flex items-start gap-3">
+         <svg class="w-6 h-6 flex-shrink-0 mt-1" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /> <polyline points="22 4 12 14.01 9 11.01" />
+         </svg>
+         <div>
+          <div class="font-semibold" style="color: #f0fdf4;">
+           Clear Communicator
+          </div>
+          <div class="text-sm" style="color: #9ca3af;">
+           Technical &amp; non-technical
+          </div>
+         </div>
+        </div>
+        <div class="flex items-start gap-3">
+         <svg class="w-6 h-6 flex-shrink-0 mt-1" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /> <polyline points="22 4 12 14.01 9 11.01" />
+         </svg>
+         <div>
+          <div class="font-semibold" style="color: #f0fdf4;">
+           Team Player
+          </div>
+          <div class="text-sm" style="color: #9ca3af;">
+           Collaborative approach
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Skills Section -->
+    <section id="skills" class="px-6 py-16">
+     <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
+       <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Skills</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- Technical Skills -->
+       <div class="rounded-xl p-6" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;">Technical Skills</h3>
+        <div class="space-y-5">
+         <div>
+          <div class="flex justify-between mb-2"><span style="color: #d1d5db;">Windows Server &amp; Active Directory</span> <span class="font-mono-custom" style="color: #22c55e;">90%</span>
+          </div>
+          <div class="h-2 rounded-full" style="background-color: #1a2f1a;">
+           <div class="h-full rounded-full skill-bar" style="width: 90%; background-color: #22c55e;"></div>
+          </div>
+         </div>
+         <div>
+          <div class="flex justify-between mb-2"><span style="color: #d1d5db;">Microsoft 365 Administration</span> <span class="font-mono-custom" style="color: #22c55e;">85%</span>
+          </div>
+          <div class="h-2 rounded-full" style="background-color: #1a2f1a;">
+           <div class="h-full rounded-full skill-bar" style="width: 85%; background-color: #22c55e;"></div>
+          </div>
+         </div>
+         <div>
+          <div class="flex justify-between mb-2"><span style="color: #d1d5db;">Windows 11 Troubleshooting</span> <span class="font-mono-custom" style="color: #22c55e;">85%</span>
+          </div>
+          <div class="h-2 rounded-full" style="background-color: #1a2f1a;">
+           <div class="h-full rounded-full skill-bar" style="width: 85%; background-color: #22c55e;"></div>
+          </div>
+         </div>
+         <div>
+          <div class="flex justify-between mb-2"><span style="color: #d1d5db;">Networking &amp; Security</span> <span class="font-mono-custom" style="color: #22c55e;">80%</span>
+          </div>
+          <div class="h-2 rounded-full" style="background-color: #1a2f1a;">
+           <div class="h-full rounded-full skill-bar" style="width: 80%; background-color: #22c55e;"></div>
+          </div>
+         </div>
+         <div>
+          <div class="flex justify-between mb-2"><span style="color: #d1d5db;">Hardware and Software Troubleshooting</span> <span class="font-mono-custom" style="color: #22c55e;">90%</span>
+          </div>
+          <div class="h-2 rounded-full" style="background-color: #1a2f1a;">
+           <div class="h-full rounded-full skill-bar" style="width: 90%; background-color: #22c55e;"></div>
+          </div>
+         </div>
+        </div>
+       </div><!-- Support Tools -->
+      <div class="rounded-xl p-6" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;"> Tools &amp; Platforms</h3>
+        <div class="flex flex-wrap gap-3"><span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">ServiceNow</span>  <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">TeamViewer</span> <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Remote Desktop</span>
+        </div>
+        <h3 class="font-mono-custom text-lg mt-8 mb-6" style="color: #22c55e;">Certifications</h3>
+        <div class="space-y-3">
+         <div class="flex items-center gap-3 p-3 rounded-lg" style="background-color: #1a2f1a;">
+          <svg class="w-5 h-5" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z" />
+          </svg><span class="text-sm" style="color: #d1d5db;">Windows 11 Advance Troubleshooting</span>
+         </div>
+         <div class="flex items-center gap-3 p-3 rounded-lg" style="background-color: #1a2f1a;">
+          <svg class="w-5 h-5" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z" />
+          </svg><span class="text-sm" style="color: #d1d5db;">Microsoft 365 Administration</span>
+         </div>
+         <div class="flex items-center gap-3 p-3 rounded-lg" style="background-color: #1a2f1a;">
+          <svg class="w-5 h-5" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z" />
+          </svg><span class="text-sm" style="color: #d1d5db;">Cisco Networking Foundations:IP Addressing</span>
+         </div>
+         <div class="flex items-center gap-3 p-3 rounded-lg" style="background-color: #1a2f1a;">
+          <svg class="w-5 h-5" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z" />
+          </svg><span class="text-sm" style="color: #d1d5db;">IT Service Desk : Service Management</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Experience Section -->
+    <section id="experience" class="px-6 py-16">
+     <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
+       <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Experience</h2>
+      </div>
+      <div class="space-y-6"><!-- Experience Item 1 -->
+       <div class="rounded-xl p-6 card-hover" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+         <div>
+          <div class="font-mono-custom text-xs mb-2" style="color: #22c55e;">
+            September 2024 - Present
+          </div>
+          <h3 class="text-xl font-bold" style="color: #f0fdf4;">Level 1.5 Technical Support Engineer</h3>
+          <div class="text-lg" style="color: #9ca3af;">
+           Far Eastern University -  Diliman
+          </div>
+         </div>
+         <div class="flex items-center gap-2 px-3 py-1 rounded-full text-xs" style="background-color: #22c55e; color: #0a0f0a;">
+          <div class="w-2 h-2 rounded-full" style="background-color: #0a0f0a;"></div> CURRENT
+         </div>
+        </div>
+        <ul class="mt-4 space-y-2">
+         <li class="flex items-start gap-2" style="color: #d1d5db;"><span style="color: #22c55e;">→</span> Ticket Management: Recording, classifying, prioritizing, and documenting all customer inquiries, incidents, and requests in a CRM/ticketing system.</li>
+         <li class="flex items-start gap-2" style="color: #d1d5db;"><span style="color: #22c55e;">→</span> Advanced User Management: Creating, modifying, and troubleshooting user accounts beyond basic password resets, including managing special attributes, OU (Organizational Unit) placement, and resolving complex account lockouts.</li>
+         <li class="flex items-start gap-2" style="color: #d1d5db;"><span style="color: #22c55e;">→</span> Initial Troubleshooting & Diagnosis: Identifying and resolving common, straightforward technical issues (e.g., connectivity, application errors).</li>
+                <li class="flex items-start gap-2" style="color: #d1d5db;"><span style="color: #22c55e;">→</span> Inventory Accuracy & Audit Compliance: Maintaining accurate, up-to-date records in the ITAM database (Configuration Management Database - CMDB). This includes tagging, tracking, and auditing assets to ensure compliance with legal and security standards.</li>
+        </ul>
+       </div><!-- Experience Item 2 -->
+       <div class="rounded-xl p-6 card-hover" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+         <div>
+          <div class="font-mono-custom text-xs mb-2" style="color: #22c55e;">
+           February 2024 - September 2024
+          </div>
+          <h3 class="text-xl font-bold" style="color: #f0fdf4;">Technical Support Specialist</h3>
+          <div class="text-lg" style="color: #9ca3af;">
+           Technological Institute of The Philippines
+          </div>
+         </div>
+        </div>
+        <ul class="mt-4 space-y-2">
+         <li class="flex items-start gap-2" style="color: #d1d5db;"><span style="color: #22c55e;">→</span> Asset Logging and Inventory Tracking: Register new hardware (laptops, monitors, peripherals) and software licenses in the Configuration Management Database (CMDB) or asset management system.</li>
+         <li class="flex items-start gap-2" style="color: #d1d5db;"><span style="color: #22c55e;">→</span>Basic Hardware Troubleshooting: Perform initial diagnostics on hardware issues, such as faulty peripherals, docking stations, or mobile devices.</li>
+         <li class="flex items-start gap-2" style="color: #d1d5db;"><span style="color: #22c55e;">→</span> Documentation and Ticketing: Maintain accurate records in the ITSM tool for all asset-related service requests, ensuring Service Level Agreements (SLAs) are met. </li>
+        </ul>
+      
+         
+      </div>
+     </div>
+    </section><!-- Contact Section -->
+    <section id="contact" class="px-6 py-16 pb-24">
+     <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
+       <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Contact </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6"><!-- Contact Info -->
+       <div class="rounded-xl p-8" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;">Get in touch</h3>
+        <div class="space-y-6">
+         <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: #1a2f1a;">
+           <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /> <polyline points="22,6 12,13 2,6" />
+           </svg>
+          </div>
+          <div>
+           <div class="text-sm" style="color: #9ca3af;">
+            Email
+           </div>
+           <div id="contact-email" class="font-mono-custom" style="color: #f0fdf4;">
+           austriaisaiahjohn6@gmail.com
+           </div>
+          </div>
+         </div>
+         <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: #1a2f1a;">
+           <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+           </svg>
+          </div>
+          <div>
+           <div class="text-sm" style="color: #9ca3af;">
+            Phone
+           </div>
+           <div id="contact-phone" class="font-mono-custom" style="color: #f0fdf4;">
+            +63 951 394 3472
+           </div>
+          </div>
+         </div>
+         <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: #1a2f1a;">
+           <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3" />
+           </svg>
+          </div>
+          <div>
+           <div class="text-sm" style="color: #9ca3af;">
+            Location
+           </div>
+           <div class="font-mono-custom" style="color: #f0fdf4;">
+           Quezon City, Diliman
+           </div>
+          </div>
+         </div>
+        </div><!-- Social Links -->
+        <div class="mt-8 pt-6" style="border-top: 1px solid #1a2f1a;">
+         <div class="text-sm mb-4" style="color: #9ca3af;">
+          Connect with me
+         </div>
+         <div class="flex gap-3"><a href="https://www.linkedin.com/in/isaiah-john-austria-54731628a" class="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:opacity-80" style="background-color: #1a2f1a;">
+           <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#22c55e"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+           </svg></a> <a href="#" class="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:opacity-80" style="background-color: #1a2f1a;">
+           <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#22c55e"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+           </svg></a> <a href="#" class="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:opacity-80" style="background-color: #1a2f1a;">
+           <svg class="w-5 h-5" viewbox="0 0 24 24" fill="#22c55e"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+           </svg></a>
+         </div>
+        </div>
+       </div><!-- Contact Form -->
+       <div class="rounded-xl p-8" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+        <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;">Send a message</h3>
+        <form id="contact-form" class="space-y-4">
+         <div><label for="name" class="block text-sm mb-2" style="color: #9ca3af;">Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg font-mono-custom text-sm focus:outline-none focus:ring-2" style="background-color: #1a2f1a; border: 1px solid #2d4a2d; color: #f0fdf4; --tw-ring-color: #22c55e;" placeholder="Your name">
+         </div>
+         <div><label for="email" class="block text-sm mb-2" style="color: #9ca3af;">Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg font-mono-custom text-sm focus:outline-none focus:ring-2" style="background-color: #1a2f1a; border: 1px solid #2d4a2d; color: #f0fdf4; --tw-ring-color: #22c55e;" placeholder="your@email.com">
+         </div>
+         <div><label for="message" class="block text-sm mb-2" style="color: #9ca3af;">Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg font-mono-custom text-sm focus:outline-none focus:ring-2 resize-none" style="background-color: #1a2f1a; border: 1px solid #2d4a2d; color: #f0fdf4; --tw-ring-color: #22c55e;" placeholder="How can I help you?"></textarea>
+         </div><button type="submit" id="submit-btn" class="w-full py-3 rounded-lg font-semibold transition-all hover:opacity-90 flex items-center justify-center gap-2" style="background-color: #22c55e; color: #0a0f0a;">
+          <svg class="w-5 h-5" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13" /> <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg> Send Message </button>
+        </form>
+        <div id="form-success" class="hidden mt-4 p-4 rounded-lg text-center" style="background-color: #1a2f1a; border: 1px solid #22c55e;">
+         <div class="font-mono-custom" style="color: #22c55e;">
+          ✓ Message sent successfully!
+         </div>
+         <div class="text-sm mt-1" style="color: #9ca3af;">
+          I'll get back to you soon.
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Footer -->
+    <footer class="px-6 py-8" style="background-color: #0d120d; border-top: 1px solid #1a2f1a;">
+     <div class="max-w-6xl mx-auto text-center">
+      <div class="font-mono-custom text-sm" style="color: #9ca3af;"><span style="color: #22c55e;">©</span> 2026 Isaiah John Austria. All systems operational.
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      hero_name: 'Isaiah John Austria',
+      hero_title: 'Level 1.5 Technical Support Engineer',
+      hero_tagline: 'Resolving complex technical challenges with precision and empathy. 2+ years of experience in enterprise IT support.',
+      about_text: "I'm a passionate Technical Support Engineer with a deep commitment to solving problems and helping users succeed. My expertise spans across Windows, Linux, macOS environments, cloud platforms (AWS, Azure, GCP), and enterprise networking. I believe that great technical support is not just about fixing issues—it's about understanding the user's needs, communicating clearly, and building lasting solutions that prevent future problems.",
+      contact_email: 'austriaisaiahjohn6@gmail.com',
+      contact_phone: '+63 951 394 3472',
+      background_color: '#0a0f0a',
+      surface_color: '#0d120d',
+      text_color: '#d1d5db',
+      primary_action_color: '#22c55e',
+      secondary_action_color: '#9ca3af',
+      font_family: 'Inter',
+      font_size: 16
+    };
+
+    let config = { ...defaultConfig };
+
+    async function onConfigChange(cfg) {
+      config = { ...defaultConfig, ...cfg };
+      
+      // Update text content
+      document.getElementById('hero-name').textContent = config.hero_name || defaultConfig.hero_name;
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-tagline').textContent = config.hero_tagline || defaultConfig.hero_tagline;
+      document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+      document.getElementById('contact-email').textContent = config.contact_email || defaultConfig.contact_email;
+      document.getElementById('contact-phone').textContent = config.contact_phone || defaultConfig.contact_phone;
+      
+      // Update colors
+      const bgColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+      
+      // Update background
+      document.querySelectorAll('.grid-bg').forEach(el => {
+        el.style.backgroundColor = bgColor;
+      });
+      
+      // Update surfaces
+      document.querySelectorAll('[style*="background-color: #0d120d"]').forEach(el => {
+        el.style.backgroundColor = surfaceColor;
+      });
+      
+      // Update primary action elements
+      document.querySelectorAll('[style*="background-color: #22c55e"]').forEach(el => {
+        el.style.backgroundColor = primaryColor;
+      });
+      document.querySelectorAll('[style*="color: #22c55e"]').forEach(el => {
+        el.style.color = primaryColor;
+      });
+      document.querySelectorAll('[style*="border-color: #22c55e"]').forEach(el => {
+        el.style.borderColor = primaryColor;
+      });
+      
+      // Update text colors
+      document.querySelectorAll('[style*="color: #d1d5db"]').forEach(el => {
+        el.style.color = textColor;
+      });
+      document.querySelectorAll('[style*="color: #9ca3af"]').forEach(el => {
+        el.style.color = secondaryColor;
+      });
+      
+      // Update fonts
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const fontSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = 'Inter, sans-serif';
+      
+      document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      document.body.style.fontSize = `${fontSize}px`;
+      
+      document.getElementById('hero-name').style.fontSize = `${fontSize * 3}px`;
+      document.getElementById('hero-title').style.fontSize = `${fontSize * 1.5}px`;
+      document.getElementById('hero-tagline').style.fontSize = `${fontSize * 1.125}px`;
+      document.getElementById('about-text').style.fontSize = `${fontSize * 1.125}px`;
+    }
+
+    function mapToCapabilities(cfg) {
+      return {
+        recolorables: [
+          {
+            get: () => cfg.background_color || defaultConfig.background_color,
+            set: (value) => {
+              cfg.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => cfg.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              cfg.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => cfg.text_color || defaultConfig.text_color,
+            set: (value) => {
+              cfg.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => cfg.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              cfg.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => cfg.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              cfg.secondary_action_color = value;
+              window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => cfg.font_family || defaultConfig.font_family,
+          set: (value) => {
+            cfg.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => cfg.font_size || defaultConfig.font_size,
+          set: (value) => {
+            cfg.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(cfg) {
+      return new Map([
+        ['hero_name', cfg.hero_name || defaultConfig.hero_name],
+        ['hero_title', cfg.hero_title || defaultConfig.hero_title],
+        ['hero_tagline', cfg.hero_tagline || defaultConfig.hero_tagline],
+        ['about_text', cfg.about_text || defaultConfig.about_text],
+        ['contact_email', cfg.contact_email || defaultConfig.contact_email],
+        ['contact_phone', cfg.contact_phone || defaultConfig.contact_phone]
+      ]);
+    }
+
+    // Avatar image upload handling
+    document.getElementById('image-input').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const img = document.getElementById('avatar-image');
+          const placeholder = document.getElementById('avatar-placeholder');
+          img.src = event.target.result;
+          img.classList.remove('hidden');
+          placeholder.classList.add('hidden');
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Contact form handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.innerHTML = '<span class="animate-pulse">Sending...</span>';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        document.getElementById('contact-form').classList.add('hidden');
+        document.getElementById('form-success').classList.remove('hidden');
+      }, 1500);
+    });
+
+    // Initialize SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb987c461a70dcb',t:'MTc3MDcwNDczOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
