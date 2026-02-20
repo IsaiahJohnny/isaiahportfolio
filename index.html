@@ -267,103 +267,201 @@
 <div class="space-y-4">
 
     <!-- Certificate Card -->
-    <a href="image/win.jpg" target="_blank"
-       class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
+    <a href="#" data-index="0"
+   class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
 
-        <div class="flex items-center gap-3">
-            <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
-                <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
-            </svg>
-            <span class="text-sm font-medium text-gray-300">
-                Windows 11 Advanced Troubleshooting
-            </span>
-        </div>
+    <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+            <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
+        </svg>
+        <span class="text-sm font-medium text-gray-300">
+            Windows 11 Advanced Troubleshooting
+        </span>
+    </div>
 
-        <span class="text-xs text-green-400 opacity-70">View</span>
-    </a>
+    <span class="text-xs text-green-400 opacity-70">View</span>
+</a>
 
-    <!-- Certificate 2 -->
-    <a href="image/mic.jpg" target="_blank"
-       class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
+<!-- Certificate 2 -->
+<a href="#" data-index="1" class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
+    <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+            <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
+        </svg>
+        <span class="text-sm font-medium text-gray-300">
+            Microsoft 365 Administration
+        </span>
+    </div>
+    <span class="text-xs text-green-400 opacity-70">View</span>
+</a>
 
-        <div class="flex items-center gap-3">
-            <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
-                <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
-            </svg>
-            <span class="text-sm font-medium text-gray-300">
-                Microsoft 365 Administration
-            </span>
-        </div>
+<!-- Certificate 3 -->
+<a href="#" data-index="2" class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
+    <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+            <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
+        </svg>
+        <span class="text-sm font-medium text-gray-300">
+            Cisco Networking Foundations: IP Addressing
+        </span>
+    </div>
+    <span class="text-xs text-green-400 opacity-70">View</span>
+</a>
 
-        <span class="text-xs text-green-400 opacity-70">View</span>
-    </a>
+<!-- Certificate 4 -->
+<a href="#" data-index="3" class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
+    <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+            <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
+        </svg>
+        <span class="text-sm font-medium text-gray-300">
+            IT Service Desk: Service Management
+        </span>
+    </div>
+    <span class="text-xs text-green-400 opacity-70">View</span>
+</a>
 
-    <!-- Certificate 3 -->
-    <a href="image/cis.jpg" target="_blank"
-       class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
+<!-- Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
 
-        <div class="flex items-center gap-3">
-            <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
-                <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
-            </svg>
-            <span class="text-sm font-medium text-gray-300">
-                Cisco Networking Foundations: IP Addressing
-            </span>
-        </div>
+    <!-- Close -->
+    <span id="closeBtn"
+          class="absolute top-6 right-8 text-white text-4xl cursor-pointer hover:text-green-400 transition">
+        &times;
+    </span>
 
-        <span class="text-xs text-green-400 opacity-70">View</span>
-    </a>
+    <!-- Previous -->
+    <button id="prevBtn"
+            class="absolute left-4 sm:left-10 text-white text-4xl hover:text-green-400 transition">
+        &#10094;
+    </button>
 
-    <!-- Certificate 4 -->
-    <a href="image/it.jpg" target="_blank"
-       class="cert-card flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300">
+    <!-- Image -->
+    <img id="modalImage"
+         class="max-w-[92%] max-h-[85vh] rounded-2xl shadow-[0_0_40px_rgba(34,197,94,0.4)]
+                border border-green-400
+                scale-90 opacity-0 transition-all duration-300 ease-out select-none">
 
-        <div class="flex items-center gap-3">
-            <svg class="w-5 h-5 cert-icon" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
-                <path d="M12 15l-2 5l9-13h-5l2-5l-9 13h5z"/>
-            </svg>
-            <span class="text-sm font-medium text-gray-300">
-                IT Service Desk: Service Management
-            </span>
-        </div>
-
-        <span class="text-xs text-green-400 opacity-70">View</span>
-    </a>
-
+    <!-- Next -->
+    <button id="nextBtn"
+            class="absolute right-4 sm:right-10 text-white text-4xl hover:text-green-400 transition">
+        &#10095;
+    </button>
 </div>
 
-<!-- Animation & Styling -->
-<style>
-.cert-card {
-    background-color: #1a2f1a;
-    border: 1px solid rgba(34, 197, 94, 0.1);
-}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-.cert-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
-    border: 1px solid rgba(34, 197, 94, 0.4);
-}
+    const images = [
+        "image/win.jpg",
+        "image/mic.jpg",
+        "image/cis.jpg",
+        "image/it.jpg"
+    ];
 
-.cert-icon {
-    transition: transform 0.3s ease;
-}
+    let currentIndex = 0;
+    let startX = 0;
 
-.cert-card:hover .cert-icon {
-    transform: translateX(5px);
-}
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.getElementById("closeBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const cards = document.querySelectorAll(".cert-card");
 
-/* Subtle pulse animation to show clickable */
-@keyframes pulseGlow {
-    0% { box-shadow: 0 0 0 rgba(34, 197, 94, 0); }
-    50% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.3); }
-    100% { box-shadow: 0 0 0 rgba(34, 197, 94, 0); }
-}
+    cards.forEach(card => {
+        card.addEventListener("click", function(e) {
+            e.preventDefault();
+            currentIndex = parseInt(this.dataset.index);
+            openModal();
+        });
+    });
 
-.cert-card {
-    animation: pulseGlow 3s infinite;
-}
-</style>
+    function openModal() {
+        modalImg.src = images[currentIndex];
+        modal.classList.remove("opacity-0", "pointer-events-none");
+
+        setTimeout(() => {
+            modalImg.classList.remove("scale-90", "opacity-0");
+            modalImg.classList.add("scale-100", "opacity-100");
+        }, 50);
+    }
+
+    function closeModal() {
+        modalImg.classList.remove("scale-100", "opacity-100");
+        modalImg.classList.add("scale-90", "opacity-0");
+
+        setTimeout(() => {
+            modal.classList.add("opacity-0", "pointer-events-none");
+        }, 200);
+    }
+
+    function slideImage(direction) {
+
+        // Slide out
+        modalImg.style.transition = "all 0.3s ease";
+        modalImg.style.transform =
+            direction === "next" ? "translateX(-100%) scale(0.95)" : "translateX(100%) scale(0.95)";
+        modalImg.style.opacity = "0";
+
+        setTimeout(() => {
+
+            // Change index
+            if (direction === "next") {
+                currentIndex = (currentIndex + 1) % images.length;
+            } else {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+            }
+
+            modalImg.src = images[currentIndex];
+
+            // Move opposite side instantly
+            modalImg.style.transition = "none";
+            modalImg.style.transform =
+                direction === "next" ? "translateX(100%) scale(0.95)" : "translateX(-100%) scale(0.95)";
+
+            setTimeout(() => {
+                // Slide in
+                modalImg.style.transition = "all 0.3s ease";
+                modalImg.style.transform = "translateX(0) scale(1)";
+                modalImg.style.opacity = "1";
+            }, 50);
+
+        }, 300);
+    }
+
+    nextBtn.addEventListener("click", () => slideImage("next"));
+    prevBtn.addEventListener("click", () => slideImage("prev"));
+    closeBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", function(e) {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", function(e) {
+        if (modal.classList.contains("pointer-events-none")) return;
+
+        if (e.key === "ArrowRight") slideImage("next");
+        if (e.key === "ArrowLeft") slideImage("prev");
+        if (e.key === "Escape") closeModal();
+    });
+
+    // 📱 Swipe support
+    modalImg.addEventListener("touchstart", function(e) {
+        startX = e.touches[0].clientX;
+    });
+
+    modalImg.addEventListener("touchend", function(e) {
+        let endX = e.changedTouches[0].clientX;
+        let diff = startX - endX;
+
+        if (diff > 50) slideImage("next");
+        if (diff < -50) slideImage("prev");
+    });
+
+});
+</script>
 </div>
 </div>
 </div>
@@ -758,9 +856,11 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb987c461a70dcb',t:'MTc3MDcwNDczOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb987c461a70dcb',t:'MTc3MDcwNDczOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 
+
+</body>
+</html>
 
 
 
