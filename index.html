@@ -284,7 +284,7 @@ links.forEach(link => {
       <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
        <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Skills</h2>
       </div>
-      <div class="grid md:grid-cols-2 gap-6"><!-- Technical Skills -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- Technical Skills -->
        <div class="rounded-xl p-6" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
         <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;">Technical Skills</h3>
         <div class="space-y-5">
@@ -586,58 +586,83 @@ document.addEventListener("DOMContentLoaded", function () {
      </div>
     </section>
       <!-- Contact Section -->
-    <section id="contact" class="px-6 py-16 pb-24">
-     <div class="max-w-6xl mx-auto">
-      <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
-       <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Contact </h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-       <div class="rounded-xl p-8" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
-        <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;">Get in touch</h3>
+  <section id="contact" class="px-4 sm:px-6 py-16 pb-24">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="flex items-center gap-3 mb-8">
+      <span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
+      <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Contact</h2>
+    </div>
+
+    <!-- FIX: added grid-cols-1 for mobile -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="rounded-xl p-6 sm:p-8 w-full max-w-full overflow-hidden"
+           style="background-color: #0d120d; border: 1px solid #1a2f1a;">
+
+        <h3 class="font-mono-custom text-lg mb-6"
+            style="color: #22c55e;">Get in touch</h3>
+
         <div class="space-y-6">
-         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: #1a2f1a;">
-           <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /> <polyline points="22,6 12,13 2,6" />
-           </svg>
+
+          <!-- Email -->
+          <div class="flex items-start sm:items-center gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                 style="background-color: #1a2f1a;">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                   stroke="#22c55e" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="break-all">
+              <div class="text-sm" style="color: #9ca3af;">Email</div>
+              <div id="contact-email" class="font-mono-custom"
+                   style="color: #f0fdf4;">
+                austriaisaiahjohn6@gmail.com
+              </div>
+            </div>
           </div>
-          <div>
-           <div class="text-sm" style="color: #9ca3af;">
-            Email
-           </div>
-           <div id="contact-email" class="font-mono-custom" style="color: #f0fdf4;">
-           austriaisaiah
-           </div>
+
+          <!-- Phone -->
+          <div class="flex items-start sm:items-center gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                 style="background-color: #1a2f1a;">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                   stroke="#22c55e" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm" style="color: #9ca3af;">Phone</div>
+              <div id="contact-phone" class="font-mono-custom"
+                   style="color: #f0fdf4;">
+                +63 9** *** ***2
+              </div>
+            </div>
           </div>
-         </div>
-         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: #1a2f1a;">
-           <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-           </svg>
+
+          <!-- Location -->
+          <div class="flex items-start sm:items-center gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                 style="background-color: #1a2f1a;">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                   stroke="#22c55e" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm" style="color: #9ca3af;">Location</div>
+              <div class="font-mono-custom"
+                   style="color: #f0fdf4;">
+                Quezon City, Diliman
+              </div>
+            </div>
           </div>
-          <div>
-           <div class="text-sm" style="color: #9ca3af;">
-            Phone
-           </div>
-           <div id="contact-phone" class="font-mono-custom" style="color: #f0fdf4;">
-            +63 9** *** ***2
-           </div>
-          </div>
-         </div>
-         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background-color: #1a2f1a;">
-           <svg class="w-6 h-6" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3" />
-           </svg>
-          </div>
-          <div>
-           <div class="text-sm" style="color: #9ca3af;">
-            Location
-           </div>
-           <div class="font-mono-custom" style="color: #f0fdf4;">
-           Quezon City, Diliman
-           </div>
-          </div>
-         </div>
+
         </div>
+
         <!-- Social Links -->
         <div class="mt-8 pt-6" style="border-top: 1px solid #1a2f1a;">
          <div class="text-sm mb-4" style="color: #9ca3af;">
@@ -657,7 +682,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
        </div>
        <!-- Contact Section -->
-<section id="contact" class="py-16 sm:py-20 bg-gray-900 text-white">
+<section id="connect" class="py-16 sm:py-20 bg-gray-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6">
     
     <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">
