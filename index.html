@@ -73,7 +73,7 @@
  <body class="h-full font-sans-custom">
   <div id="app-container" class="h-full overflow-auto"><!-- Background Layer -->
    <div class="min-h-full grid-bg" style="background-color: #0a0f0a;"><!-- Navigation Bar -->
-  <nav class="sticky top-0 z-50 border-b backdrop-blur-md"
+    <nav class="sticky top-0 z-50 border-b backdrop-blur-md"
      style="background-color: rgba(10, 15, 10, 0.95); border-color: #1a2f1a;">
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -193,7 +193,7 @@ links.forEach(link => {
       </div>
      </div>
     </section><!-- Stats Section -->
-    <section class="px-4 sm:px-6 lg:px-8">
+    <section class="px-6 pb-16">
      <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
        <div class="rounded-lg p-6 text-center card-hover" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
@@ -231,7 +231,7 @@ links.forEach(link => {
       </div>
      </div>
     </section><!-- About Section -->
-    <section id="about" class="px-4 sm:px-6 lg:px-8">
+    <section id="about" class="px-6 py-16">
      <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
        <h2 class="text-2xl font-bold" style="color: #f0fdf4;">About</h2>
@@ -279,7 +279,7 @@ links.forEach(link => {
       </div>
      </div>
     </section><!-- Skills Section -->
-    <section id="skills" class="px-4 sm:px-6 lg:px-8">
+    <section id="skills" class="px-6 py-16">
      <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
        <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Skills</h2>
@@ -327,7 +327,7 @@ links.forEach(link => {
        </div><!-- Support Tools -->
       <div class="rounded-xl p-6" style="background-color: #0d120d; border: 1px solid #1a2f1a;">
         <h3 class="font-mono-custom text-lg mb-6" style="color: #22c55e;"> Tools &amp; Platforms</h3>
-        <div class="flex flex-wrap gap-3"><span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">MS365 App</span>  <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Github</span> <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Remote Desktop</span>  <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Windows Server</span>  <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Microsoft Teams</span> <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Active Directory</span>
+        <div class="flex flex-wrap gap-3"><span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">MS365 App</span> <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">IMS</span> <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Github</span> <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Remote Desktop</span>  <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Windows Server</span>  <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Microsoft Teams</span> <span class="px-4 py-2 rounded-lg text-sm font-mono-custom" style="background-color: #1a2f1a; color: #22c55e;">Active Directory</span>
         </div>
      <h3 class="font-mono-custom text-lg mt-8 mb-6" style="color: #22c55e;">
     Certifications
@@ -408,7 +408,9 @@ links.forEach(link => {
 
     <!-- Image -->
     <img id="modalImage"
-        class="w-[90%] sm:w-auto max-w-lg max-h-[80vh] rounded-2xl shadow-lg border border-green-400 transition-all duration-300">
+         class="max-w-[92%] max-h-[85vh] rounded-2xl shadow-[0_0_40px_rgba(34,197,94,0.4)]
+                border border-green-400
+                scale-90 opacity-0 transition-all duration-300 ease-out select-none">
 
     <!-- Next -->
     <button id="nextBtn"
@@ -534,7 +536,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 <!-- Experience Section -->
-    <section id="experience" class="px-4 sm:px-6 lg:px-8">
+    <section id="experience" class="px-6 py-16">
      <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
        <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Experience</h2>
@@ -585,7 +587,7 @@ document.addEventListener("DOMContentLoaded", function () {
      </div>
     </section>
       <!-- Contact Section -->
-    <section id="contact" class="px-4 sm:px-6 lg:px-8">
+    <section id="contact" class="px-6 py-16 pb-24">
      <div class="max-w-6xl mx-auto">
       <div class="flex items-center gap-3 mb-8"><span class="font-mono-custom text-sm" style="color: #22c55e;">$</span>
        <h2 class="text-2xl font-bold" style="color: #f0fdf4;">Contact </h2>
@@ -604,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Email
            </div>
            <div id="contact-email" class="font-mono-custom" style="color: #f0fdf4;">
-           austriaisaiahjohn6@gmail.com
+           austriaisaiah
            </div>
           </div>
          </div>
@@ -655,8 +657,8 @@ document.addEventListener("DOMContentLoaded", function () {
          </div>
         </div>
        </div>
-       <!-- Connect Section -->
-<section id="connect" class="py-16 sm:py-20 bg-gray-900 text-white">
+       <!-- Contact Section -->
+<section id="contact" class="py-16 sm:py-20 bg-gray-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6">
     
     <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">
@@ -728,7 +730,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 
 <!-- Footer -->
-    <footer class="px-4 sm:px-6 lg:px-8" style="background-color: #0d120d; border-top: 1px solid #1a2f1a;">
+    <footer class="px-6 py-8" style="background-color: #0d120d; border-top: 1px solid #1a2f1a;">
      <div class="max-w-6xl mx-auto text-center">
       <div class="font-mono-custom text-sm" style="color: #9ca3af;"><span style="color: #22c55e;">©</span> 2026 Isaiah John Austria. All systems operational.
       </div>
@@ -928,6 +930,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
+
 
 
 
